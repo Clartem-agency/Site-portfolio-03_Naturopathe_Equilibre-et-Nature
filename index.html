@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Équilibre & Nature - Naturopathe à Lyon | Sophie Martin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Using a style tag for custom fonts or complex animations if needed */
+        /* The primary font stack is system-ui which is Tailwind's default, so no extra font import is needed. */
+        @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
+
+        .font-times {
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'nature-green': '#568f56',
+                        'sage-light': '#d1e0c1',
+                        'warm-white': '#fbfaf9',
+                        'cream': '#fbebe1',
+                        'foreground': '#3c4858',
+                        'muted-foreground': '#8a9aa1',
+                        'primary-foreground': '#fbfaf9',
+                        'card': '#ffffff',
+                        'dark-green-text': '#14301d',
+                        'medium-green-text': '#628462',
+                        'border-green': '#bfae93',
+                    },
+                    fontFamily: {
+                        sans: ['ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', "Noto Sans", 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
+                    },
+                    boxShadow: {
+                        'card': '0 10px 25px -5px rgba(0, 0, 0, 0.07), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                        'soft': '0 4px 12px rgba(0,0,0,0.05)',
+                    },
+                    keyframes: {
+                        'accordion-down': {
+                            from: { height: '0' },
+                            to: { height: 'var(--radix-accordion-content-height)' },
+                        },
+                        'accordion-up': {
+                            from: { height: 'var(--radix-accordion-content-height)' },
+                            to: { height: '0' },
+                        },
+                    },
+                    animation: {
+                        'accordion-down': 'accordion-down 0.2s ease-out',
+                        'accordion-up': 'accordion-up 0.2s ease-out',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-warm-white text-foreground font-sans">
+
+    <div id="root" class="min-h-screen">
+        <!-- Header -->
+        <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+            <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+                <a href="#" class="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-nature-green"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
+                    <span class="text-xl font-semibold text-foreground">Équilibre & Nature</span>
+                </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-foreground hover:text-nature-green transition-colors">Mon Approche</a>
+                    <a href="#services" class="text-foreground hover:text-nature-green transition-colors">Accompagnements</a>
+                    <a href="#blog" class="text-foreground hover:text-nature-green transition-colors">Blog Santé</a>
+                    <a href="#contact" class="text-foreground hover:text-nature-green transition-colors">Contact</a>
+                </nav>
+                <a href="#appointment" class="hidden md:inline-flex items-center justify-center whitespace-nowrap text-sm font-medium h-10 bg-nature-green hover:bg-nature-green/90 text-primary-foreground px-6 py-2 rounded-full">
+                    Prendre RDV
+                </a>
+                <button id="mobile-menu-button" class="md:hidden text-foreground">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="relative min-h-screen flex items-center justify-center text-center overflow-hidden" style="background-image: linear-gradient(rgba(120, 153, 120, 0.4), rgba(120, 153, 120, 0.4)), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop'); background-size: cover; background-position: center center; background-attachment: fixed;">
+                <div class="container mx-auto px-4 z-10">
+                    <div class="max-w-4xl mx-auto">
+                        <h1 class="text-5xl md:text-6xl font-bold text-warm-white mb-6 leading-tight">
+                            Retrouvez Votre Énergie Vitale,
+                            <span class="text-sage-light"> Naturellement</span>
+                        </h1>
+                        <p class="text-xl md:text-2xl text-warm-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+                            Accompagnement personnalisé en naturopathie à Lyon pour vous aider à cultiver l'équilibre au quotidien.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <a href="#appointment" class="inline-flex items-center justify-center whitespace-nowrap h-11 bg-warm-white text-nature-green hover:bg-warm-white/90 px-8 py-4 text-lg font-semibold rounded-full shadow-lg transition-transform hover:scale-105">
+                                Prendre rendez-vous
+                            </a>
+                            <a href="#blog" class="text-warm-white hover:text-sage-light transition-colors text-lg font-medium underline underline-offset-4">
+                                Découvrir mes conseils
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-warm-white/70"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="py-20 bg-warm-white">
+                <div class="container mx-auto px-4">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                        <div class="order-2 lg:order-1">
+                            <h2 class="text-4xl font-bold text-foreground mb-6">Mon Histoire, Votre Équilibre</h2>
+                            <div class="space-y-4 text-lg text-muted-foreground leading-relaxed">
+                                <p>Pendant 10 ans, j'ai évolué dans le monde exigeant du marketing. Le stress, la pression et un rythme effréné faisaient partie de mon quotidien, jusqu'au jour où mon corps a dit stop. Ce burn-out a été un électrochoc, mais aussi une révélation.</p>
+                                <p>C'est en cherchant des solutions pour me reconstruire que j'ai découvert la puissance de la naturopathie. J'ai compris que notre corps possède des capacités de régénération extraordinaires, à condition de lui donner ce dont il a besoin.</p>
+                                <p>J'ai alors décidé de me former pour faire de cette passion mon métier. Aujourd'hui, ma mission est de vous transmettre les clés pour que vous puissiez, vous aussi, devenir l'acteur principal de votre bien-être.</p>
+                                <p class="text-nature-green font-medium">Mon approche est bienveillante, déculpabilisante et profondément individualisée, car je suis convaincue que chaque personne est unique. Ensemble, nous créerons un chemin vers votre équilibre.</p>
+                            </div>
+                        </div>
+                        <div class="order-1 lg:order-2">
+                            <div class="relative">
+                                <img src="https://i.imgur.com/2Y2zQYc.jpeg" alt="Sophie Martin, naturopathe certifiée" class="w-full h-auto rounded-2xl shadow-card object-cover">
+                                <div class="absolute -bottom-4 -right-4 w-20 h-20 bg-sage-light rounded-full flex items-center justify-center shadow-lg">
+                                    <span class="text-nature-green font-bold text-lg">10+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="py-20 bg-sage-light/30">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold text-foreground mb-4">Des Accompagnements sur Mesure pour Vous</h2>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        <div class="bg-card hover:shadow-card transition-all duration-300 transform hover:-translate-y-2 border-none rounded-lg">
+                            <div class="flex flex-col space-y-1.5 p-6 text-center pb-4">
+                                <div class="flex justify-center mb-4">
+                                    <div class="p-4 bg-sage-light rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-nature-green"><path d="M7 20h10"></path><path d="M10 20c5.5-2.5.8-6.4 3-10"></path><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"></path><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"></path></svg>
+                                    </div>
+                                </div>
+                                <h3 class="tracking-tight text-xl font-semibold text-foreground">Bilan Vitalité</h3>
+                            </div>
+                            <div class="p-6 pt-0 text-center">
+                                <p class="text-muted-foreground mb-6 leading-relaxed">Une première séance de 1h30 pour faire un point complet sur votre hygiène de vie, identifier vos besoins et repartir avec un protocole personnalisé et vos premiers conseils concrets.</p>
+                                <div class="text-3xl font-bold text-nature-green">80€</div>
+                            </div>
+                        </div>
+                        <div class="bg-card hover:shadow-card transition-all duration-300 transform hover:-translate-y-2 border-none rounded-lg">
+                            <div class="flex flex-col space-y-1.5 p-6 text-center pb-4">
+                                <div class="flex justify-center mb-4">
+                                    <div class="p-4 bg-sage-light rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-nature-green"><path d="M12 5a3 3 0 1 1 3 3m-3-3a3 3 0 1 0-3 3m3-3v1M9 8a3 3 0 1 0 3 3M9 8h1m5 0a3 3 0 1 1-3 3m3-3h-1m-2 3v-1"></path><circle cx="12" cy="8" r="2"></circle><path d="M12 10v12"></path><path d="M12 22c4.2 0 7-1.667 7-5-4.2 0-7 1.667-7 5Z"></path><path d="M12 22c-4.2 0-7-1.667-7-5 4.2 0 7 1.667 7 5Z"></path></svg>
+                                    </div>
+                                </div>
+                                <h3 class="tracking-tight text-xl font-semibold text-foreground">Accompagnement "Sérénité"</h3>
+                            </div>
+                            <div class="p-6 pt-0 text-center">
+                                <p class="text-muted-foreground mb-6 leading-relaxed">Un forfait de 3 séances pour agir en profondeur sur la gestion du stress et de l'anxiété. Nous travaillons sur l'équilibre nerveux, le sommeil et l'alimentation apaisante.</p>
+                                <div class="text-3xl font-bold text-nature-green">210€</div>
+                            </div>
+                        </div>
+                        <div class="bg-card hover:shadow-card transition-all duration-300 transform hover:-translate-y-2 border-none rounded-lg">
+                            <div class="flex flex-col space-y-1.5 p-6 text-center pb-4">
+                                <div class="flex justify-center mb-4">
+                                    <div class="p-4 bg-sage-light rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-nature-green"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+                                    </div>
+                                </div>
+                                <h3 class="tracking-tight text-xl font-semibold text-foreground">Accompagnement "Détox &amp; Énergie"</h3>
+                            </div>
+                            <div class="p-6 pt-0 text-center">
+                                <p class="text-muted-foreground mb-6 leading-relaxed">Un programme de 3 séances pour soutenir les fonctions d'élimination de votre corps, retrouver de la vitalité et alléger votre digestion. Idéal aux changements de saison.</p>
+                                <div class="text-3xl font-bold text-nature-green">210€</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="py-20 bg-warm-white">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold text-foreground mb-4">Elles m'ont fait confiance</h2>
+                    </div>
+                    <div class="max-w-4xl mx-auto">
+                        <div id="testimonial-card" class="rounded-lg border bg-card text-card-foreground shadow-sm bg-gradient-to-br from-sage-light/50 to-cream border-none shadow-card">
+                            <div class="p-8 md:p-12">
+                                <div class="text-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-nature-green mx-auto mb-6"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+                                    <blockquote id="testimonial-text" class="text-xl md:text-2xl text-foreground leading-relaxed mb-8 italic"></blockquote>
+                                    <div class="space-y-2">
+                                        <p id="testimonial-author" class="font-semibold text-lg text-foreground"></p>
+                                        <p id="testimonial-role" class="text-muted-foreground"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center space-x-4 mt-8">
+                            <button id="prev-testimonial" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium h-9 px-3 rounded-full border border-nature-green text-nature-green bg-transparent hover:bg-nature-green hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="m15 18-6-6 6-6"></path></svg>
+                            </button>
+                            <div id="testimonial-dots" class="flex space-x-2">
+                                <!-- Dots will be generated by JS -->
+                            </div>
+                            <button id="next-testimonial" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium h-9 px-3 rounded-full border border-nature-green text-nature-green bg-transparent hover:bg-nature-green hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="m9 18 6-6-6-6"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog Section -->
+            <section id="blog" class="py-20 bg-sage-light/30">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold text-foreground mb-4">Mon Blog Santé : Conseils &amp; Inspirations</h2>
+                        <p class="text-xl text-muted-foreground max-w-3xl mx-auto">Parce que la transmission est au cœur de ma pratique, je vous partage ici des articles pour vous aider à mieux comprendre votre corps et à cultiver votre bien-être au quotidien.</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        <div class="bg-card hover:shadow-card transition-all duration-300 transform hover:-translate-y-2 border-none overflow-hidden rounded-lg">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://i.imgur.com/3q4Y2Yd.jpeg" alt="Les 5 plantes alliées d'un sommeil réparateur" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-nature-green text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">Phytothérapie</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col space-y-1.5 p-6">
+                                <h3 class="text-xl font-semibold text-foreground leading-tight">Les 5 plantes alliées d'un sommeil réparateur</h3>
+                            </div>
+                            <div class="p-6 pt-0">
+                                <a href="#" class="text-nature-green hover:text-nature-green/80 font-medium flex items-center group">
+                                    Lire l'article
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-card hover:shadow-card transition-all duration-300 transform hover:-translate-y-2 border-none overflow-hidden rounded-lg">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://i.imgur.com/2g2Y2Yd.jpeg" alt="Manger en pleine conscience : comment ça marche ?" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-nature-green text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">Nutrition</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col space-y-1.5 p-6">
+                                <h3 class="text-xl font-semibold text-foreground leading-tight">Manger en pleine conscience : comment ça marche ?</h3>
+                            </div>
+                            <div class="p-6 pt-0">
+                                <a href="#" class="text-nature-green hover:text-nature-green/80 font-medium flex items-center group">
+                                    Lire l'article
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-card hover:shadow-card transition-all duration-300 transform hover:-translate-y-2 border-none overflow-hidden rounded-lg">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://i.imgur.com/1Y2zQYc.jpeg" alt="La cohérence cardiaque : votre outil anti-stress en 5 minutes" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-nature-green text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">Gestion du stress</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col space-y-1.5 p-6">
+                                <h3 class="text-xl font-semibold text-foreground leading-tight">La cohérence cardiaque : votre outil anti-stress en 5 minutes</h3>
+                            </div>
+                            <div class="p-6 pt-0">
+                                <a href="#" class="text-nature-green hover:text-nature-green/80 font-medium flex items-center group">
+                                    Lire l'article
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-12">
+                        <a href="#" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium h-11 border border-nature-green text-nature-green bg-transparent hover:bg-nature-green hover:text-white px-8 py-3 rounded-full transition-colors">
+                            Voir tous les articles
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="py-20 bg-warm-white">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold text-foreground mb-4">Vos Questions, Mes Réponses</h2>
+                    </div>
+                    <div class="max-w-4xl mx-auto">
+                        <div class="space-y-4" data-orientation="vertical">
+                            <div class="accordion-item bg-card rounded-lg px-6 border-none shadow-soft">
+                                <h3 class="flex">
+                                    <button class="accordion-trigger flex flex-1 items-center justify-between transition-all hover:underline text-left text-lg font-semibold text-foreground hover:text-nature-green py-6">
+                                        Comment se déroule une première consultation ?
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+                                    </button>
+                                </h3>
+                                <div class="accordion-content overflow-hidden text-sm transition-all">
+                                    <div class="pt-0 text-muted-foreground text-base leading-relaxed pb-6">La première séance, ou 'Bilan Vitalité', dure 1h30. C'est un temps d'échange approfondi où nous passons en revue vos habitudes de vie, votre alimentation, votre état émotionnel... À l'issue de cette séance, je vous envoie par email un protocole d'hygiène vitale personnalisé avec des conseils concrets à mettre en place.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item bg-card rounded-lg px-6 border-none shadow-soft">
+                                <h3 class="flex">
+                                    <button class="accordion-trigger flex flex-1 items-center justify-between transition-all hover:underline text-left text-lg font-semibold text-foreground hover:text-nature-green py-6">
+                                        La naturopathie est-elle remboursée ?
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+                                    </button>
+                                </h3>
+                                <div class="accordion-content overflow-hidden text-sm transition-all">
+                                    <div class="pt-0 text-muted-foreground text-base leading-relaxed pb-6">La naturopathie n'est pas remboursée par la Sécurité Sociale. Cependant, de plus en plus de mutuelles proposent des forfaits pour les médecines douces. Je vous invite à vous renseigner auprès de votre complémentaire santé. Je vous fournirai une facture sur demande.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item bg-card rounded-lg px-6 border-none shadow-soft">
+                                <h3 class="flex">
+                                    <button class="accordion-trigger flex flex-1 items-center justify-between transition-all hover:underline text-left text-lg font-semibold text-foreground hover:text-nature-green py-6">
+                                        Dois-je changer toute mon alimentation et acheter plein de compléments ?
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+                                    </button>
+                                </h3>
+                                <div class="accordion-content overflow-hidden text-sm transition-all">
+                                    <div class="pt-0 text-muted-foreground text-base leading-relaxed pb-6">Absolument pas. Mon approche est progressive et respectueuse de votre rythme. Nous mettons en place des changements réalistes, pas à pas. Les compléments alimentaires ne sont pas systématiques et ne sont conseillés que si une carence ou un besoin spécifique est identifié, toujours en soutien d'une alimentation adaptée.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Appointment Section -->
+            <section id="appointment" class="py-20 bg-sage-light/30">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold text-foreground mb-4">Prête à commencer ?</h2>
+                        <p class="text-xl text-muted-foreground max-w-3xl mx-auto">Planifions notre premier échange. Choisissez le créneau qui vous arrange directement ci-dessous pour votre Bilan Vitalité.</p>
+                    </div>
+                    <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
+                        <div class="space-y-8">
+                            <div class="rounded-lg border text-card-foreground shadow-sm bg-card border-none shadow-card">
+                                <div class="flex flex-col space-y-1.5 p-6">
+                                    <h3 class="tracking-tight flex items-center text-xl font-semibold text-foreground">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-nature-green mr-3"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+                                        Bilan Vitalité - Première consultation
+                                    </h3>
+                                </div>
+                                <div class="p-6 pt-0 space-y-4">
+                                    <div class="flex items-center text-muted-foreground">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-nature-green mr-3"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                        <span>Durée : 1h30</span>
+                                    </div>
+                                    <div class="flex items-center text-muted-foreground">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-nature-green mr-3"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                        <span>Cabinet Plénitude, Lyon 2e</span>
+                                    </div>
+                                    <div class="bg-sage-light/50 p-4 rounded-lg">
+                                        <p class="text-sm text-foreground font-medium mb-2">Que comprend cette séance ?</p>
+                                        <ul class="text-sm text-muted-foreground space-y-1">
+                                            <li>• Bilan complet de votre hygiène de vie</li>
+                                            <li>• Analyse de vos besoins individuels</li>
+                                            <li>• Protocole personnalisé envoyé par email</li>
+                                            <li>• Premiers conseils concrets à appliquer</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-sm text-muted-foreground mb-4">Vous préférez échanger par téléphone avant de prendre rendez-vous ?</p>
+                                <p class="text-nature-green font-medium">📞 06 12 34 56 78</p>
+                            </div>
+                        </div>
+                        <div class="bg-card rounded-lg shadow-card p-8">
+                            <div class="text-center space-y-4">
+                                <div class="h-64 bg-sage-light/30 rounded-lg flex items-center justify-center">
+                                    <div class="text-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-16 w-16 text-nature-green mx-auto mb-4"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+                                        <p class="text-muted-foreground text-lg">Module de réservation Calendly</p>
+                                        <p class="text-sm text-muted-foreground mt-2">Intégration à prévoir</p>
+                                    </div>
+                                </div>
+                                <div class="space-y-2">
+                                    <p class="text-lg font-semibold text-foreground">80€ la séance</p>
+                                    <p class="text-sm text-muted-foreground">Règlement par chèque, espèces ou virement</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer id="contact" class="bg-nature-green text-primary-foreground">
+            <div class="container mx-auto px-4 py-16">
+                <div class="grid md:grid-cols-3 gap-8 mb-8">
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-sage-light"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
+                            <span class="text-xl font-semibold">Équilibre & Nature</span>
+                        </div>
+                        <p class="text-primary-foreground/90 leading-relaxed">Sophie Martin, naturopathe certifiée à Lyon. Accompagnement pour un bien-être durable et naturel.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary-foreground hover:text-sage-light transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                            </a>
+                            <a href="#" class="text-primary-foreground hover:text-sage-light transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-semibold text-sage-light">Explorer</h3>
+                        <nav class="space-y-2">
+                            <a href="#about" class="block text-primary-foreground/90 hover:text-sage-light transition-colors">Mon Approche</a>
+                            <a href="#services" class="block text-primary-foreground/90 hover:text-sage-light transition-colors">Accompagnements</a>
+                            <a href="#blog" class="block text-primary-foreground/90 hover:text-sage-light transition-colors">Blog Santé</a>
+                            <a href="#appointment" class="block text-primary-foreground/90 hover:text-sage-light transition-colors">Prendre RDV</a>
+                        </nav>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-semibold text-sage-light">Contact</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-sage-light mt-1 flex-shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                <div class="text-primary-foreground/90">
+                                    <p>Cabinet Plénitude</p>
+                                    <p>12 Rue de la République</p>
+                                    <p>69002 Lyon</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-sage-light"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                                <a href="mailto:contact@equilibre-nature.fr" class="text-primary-foreground/90 hover:text-sage-light transition-colors">contact@equilibre-nature.fr</a>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-sage-light"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                <a href="tel:0612345678" class="text-primary-foreground/90 hover:text-sage-light transition-colors">06 12 34 56 78</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-primary-foreground/20 pt-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                        <p class="text-primary-foreground/80 text-sm">© 2024 Équilibre & Nature - Tous droits réservés.</p>
+                        <div class="flex space-x-6 text-sm">
+                            <a href="#" class="text-primary-foreground/80 hover:text-sage-light transition-colors">Mentions Légales</a>
+                            <a href="#" class="text-primary-foreground/80 hover:text-sage-light transition-colors">Politique de Confidentialité</a>
+                            <span class="text-primary-foreground/60">Site web réalisé par <span class="text-sage-light">Clartem</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Header scroll effect
+            const header = document.getElementById('main-header');
+            const logoText = header.querySelector('span');
+            const navLinks = header.querySelectorAll('nav a');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.remove('bg-transparent');
+                    header.classList.add('bg-warm-white', 'shadow-md');
+                    logoText.classList.remove('text-foreground');
+                    logoText.classList.add('text-foreground'); // No change needed based on video, but good practice
+                    navLinks.forEach(link => link.classList.remove('text-foreground'));
+                    navLinks.forEach(link => link.classList.add('text-foreground'));
+                    mobileMenuButton.classList.remove('text-foreground');
+                    mobileMenuButton.classList.add('text-foreground');
+                } else {
+                    header.classList.add('bg-transparent');
+                    header.classList.remove('bg-warm-white', 'shadow-md');
+                }
+            });
+
+            // Testimonial Carousel
+            const testimonials = [
+                {
+                    text: "Je suis arrivée chez Sophie complètement épuisée et perdue face à mes troubles digestifs. Son écoute et sa bienveillance m'ont immédiatement mise en confiance. Grâce à ses conseils, j'ai non seulement retrouvé un confort digestif, mais aussi une énergie que je n'avais plus depuis des années. Un immense merci !",
+                    author: "Amélie D., 36 ans",
+                    role: "Chef de projet"
+                },
+                {
+                    text: "J'étais sceptique au début, mais l'approche de Sophie est à la fois douce et incroyablement structurée. Elle ne m'a rien imposé, nous avons construit ensemble un nouveau mode de vie, pas à pas. J'ai appris à mieux gérer mon stress et mon sommeil s'est radicalement amélioré.",
+                    author: "Caroline L., 44 ans",
+                    role: "Avocate"
+                }
+            ];
+
+            let currentTestimonial = 0;
+            const testimonialText = document.getElementById('testimonial-text');
+            const testimonialAuthor = document.getElementById('testimonial-author');
+            const testimonialRole = document.getElementById('testimonial-role');
+            const testimonialCard = document.getElementById('testimonial-card');
+            const dotsContainer = document.getElementById('testimonial-dots');
+
+            function updateTestimonial(index) {
+                const testimonial = testimonials[index];
+                
+                testimonialCard.style.opacity = 0;
+                setTimeout(() => {
+                    testimonialText.textContent = `"${testimonial.text}"`;
+                    testimonialAuthor.textContent = testimonial.author;
+                    testimonialRole.textContent = testimonial.role;
+                    testimonialCard.style.opacity = 1;
+                }, 200);
+
+
+                // Update dots
+                Array.from(dotsContainer.children).forEach((dot, i) => {
+                    dot.classList.toggle('bg-nature-green', i === index);
+                    dot.classList.toggle('bg-muted', i !== index);
+                });
+            }
+
+            // Create dots
+            testimonials.forEach((_, i) => {
+                const dot = document.createElement('button');
+                dot.className = 'w-3 h-3 rounded-full transition-colors';
+                dot.addEventListener('click', () => {
+                    currentTestimonial = i;
+                    updateTestimonial(i);
+                });
+                dotsContainer.appendChild(dot);
+            });
+
+            document.getElementById('prev-testimonial').addEventListener('click', () => {
+                currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+                updateTestimonial(currentTestimonial);
+            });
+
+            document.getElementById('next-testimonial').addEventListener('click', () => {
+                currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+                updateTestimonial(currentTestimonial);
+            });
+
+            // Initial load
+            updateTestimonial(0);
+
+            // FAQ Accordion
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            accordionItems.forEach((item, index) => {
+                const trigger = item.querySelector('.accordion-trigger');
+                const content = item.querySelector('.accordion-content');
+                content.style.maxHeight = '0px';
+                content.style.transition = 'max-height 0.3s ease-out';
+
+                // Open the first one by default
+                if (index === 0) {
+                    item.dataset.state = 'open';
+                    trigger.setAttribute('aria-expanded', 'true');
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    trigger.querySelector('svg').style.transform = 'rotate(180deg)';
+                } else {
+                     item.dataset.state = 'closed';
+                     trigger.setAttribute('aria-expanded', 'false');
+                }
+
+                trigger.addEventListener('click', () => {
+                    const isOpen = item.dataset.state === 'open';
+                    
+                    // Close all other items
+                    accordionItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.dataset.state = 'closed';
+                            otherItem.querySelector('.accordion-trigger').setAttribute('aria-expanded', 'false');
+                            otherItem.querySelector('.accordion-content').style.maxHeight = '0px';
+                            otherItem.querySelector('svg').style.transform = 'rotate(0deg)';
+                        }
+                    });
+
+                    // Toggle the clicked item
+                    if (isOpen) {
+                        item.dataset.state = 'closed';
+                        trigger.setAttribute('aria-expanded', 'false');
+                        content.style.maxHeight = '0px';
+                        trigger.querySelector('svg').style.transform = 'rotate(0deg)';
+                    } else {
+                        item.dataset.state = 'open';
+                        trigger.setAttribute('aria-expanded', 'true');
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        trigger.querySelector('svg').style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
