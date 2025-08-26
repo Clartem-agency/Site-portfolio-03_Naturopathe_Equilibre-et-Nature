@@ -13,6 +13,11 @@
         .font-times {
             font-family: 'Times New Roman', Times, serif;
         }
+
+        /* Hide elements for ScrollReveal */
+        .reveal {
+            visibility: hidden;
+        }
     </style>
     <script>
         tailwind.config = {
@@ -84,7 +89,7 @@
 
         <main>
             <!-- Hero Section -->
-            <section class="relative min-h-screen flex items-center justify-center text-center overflow-hidden" style="background-image: linear-gradient(rgba(120, 153, 120, 0.4), rgba(120, 153, 120, 0.4)), url('images/hero-background.webp'); background-size: cover; background-position: center center; background-attachment: fixed;">
+            <section class="relative min-h-screen flex items-center justify-center text-center overflow-hidden" style="background-image: linear-gradient(rgba(120, 153, 120, 0.4), rgba(120, 153, 120, 0.4)), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop'); background-size: cover; background-position: center center; background-attachment: fixed;">
                 <div class="container mx-auto px-4 z-10">
                     <div class="max-w-4xl mx-auto">
                         <h1 class="text-5xl md:text-6xl font-bold text-warm-white mb-6 leading-tight">
@@ -114,17 +119,17 @@
                 <div class="container mx-auto px-4">
                     <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
                         <div class="order-2 lg:order-1">
-                            <h2 class="text-4xl font-bold text-foreground mb-6">Mon Histoire, Votre Équilibre</h2>
-                            <div class="space-y-4 text-lg text-muted-foreground leading-relaxed">
+                            <h2 class="text-4xl font-bold text-foreground mb-6 reveal">Mon Histoire, Votre Équilibre</h2>
+                            <div class="space-y-4 text-lg text-muted-foreground leading-relaxed reveal">
                                 <p>Pendant 10 ans, j'ai évolué dans le monde exigeant du marketing. Le stress, la pression et un rythme effréné faisaient partie de mon quotidien, jusqu'au jour où mon corps a dit stop. Ce burn-out a été un électrochoc, mais aussi une révélation.</p>
                                 <p>C'est en cherchant des solutions pour me reconstruire que j'ai découvert la puissance de la naturopathie. J'ai compris que notre corps possède des capacités de régénération extraordinaires, à condition de lui donner ce dont il a besoin.</p>
                                 <p>J'ai alors décidé de me former pour faire de cette passion mon métier. Aujourd'hui, ma mission est de vous transmettre les clés pour que vous puissiez, vous aussi, devenir l'acteur principal de votre bien-être.</p>
                                 <p class="text-nature-green font-medium">Mon approche est bienveillante, déculpabilisante et profondément individualisée, car je suis convaincue que chaque personne est unique. Ensemble, nous créerons un chemin vers votre équilibre.</p>
                             </div>
                         </div>
-                        <div class="order-1 lg:order-2">
+                        <div class="order-1 lg:order-2 reveal">
                             <div class="relative">
-                                <img src="images/sophie-martin-portrait.webp" alt="Sophie Martin, naturopathe certifiée" class="w-full h-auto rounded-2xl shadow-card object-cover">
+                                <img src="https://i.imgur.com/2Y2zQYc.jpeg" alt="Sophie Martin, naturopathe certifiée" class="w-full h-auto rounded-2xl shadow-card object-cover" loading="lazy">
                                 <div class="absolute -bottom-4 -right-4 w-20 h-20 bg-sage-light rounded-full flex items-center justify-center shadow-lg">
                                     <span class="text-nature-green font-bold text-lg">10+</span>
                                 </div>
@@ -137,11 +142,11 @@
             <!-- Services Section -->
             <section id="services" class="py-20 bg-sage-light/30">
                 <div class="container mx-auto px-4">
-                    <div class="text-center mb-16">
+                    <div class="text-center mb-16 reveal">
                         <h2 class="text-4xl font-bold text-foreground mb-4">Des Accompagnements sur Mesure pour Vous</h2>
                     </div>
                     <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        <div class="bg-card hover:shadow-card transition-all duration-300 transform hover:-translate-y-2 border-none rounded-lg">
+                        <div class="bg-card hover:shadow-card transition-all duration-300 transform hover:-translate-y-2 border-none rounded-lg reveal">
                             <div class="flex flex-col space-y-1.5 p-6 text-center pb-4">
                                 <div class="flex justify-center mb-4">
                                     <div class="p-4 bg-sage-light rounded-full">
@@ -155,7 +160,7 @@
                                 <div class="text-3xl font-bold text-nature-green">80€</div>
                             </div>
                         </div>
-                        <div class="bg-card hover:shadow-card transition-all duration-300 transform hover:-translate-y-2 border-none rounded-lg">
+                        <div class="bg-card hover:shadow-card transition-all duration-300 transform hover:-translate-y-2 border-none rounded-lg reveal">
                             <div class="flex flex-col space-y-1.5 p-6 text-center pb-4">
                                 <div class="flex justify-center mb-4">
                                     <div class="p-4 bg-sage-light rounded-full">
@@ -169,7 +174,7 @@
                                 <div class="text-3xl font-bold text-nature-green">210€</div>
                             </div>
                         </div>
-                        <div class="bg-card hover:shadow-card transition-all duration-300 transform hover:-translate-y-2 border-none rounded-lg">
+                        <div class="bg-card hover:shadow-card transition-all duration-300 transform hover:-translate-y-2 border-none rounded-lg reveal">
                             <div class="flex flex-col space-y-1.5 p-6 text-center pb-4">
                                 <div class="flex justify-center mb-4">
                                     <div class="p-4 bg-sage-light rounded-full">
@@ -190,10 +195,10 @@
             <!-- Testimonials Section -->
             <section class="py-20 bg-warm-white">
                 <div class="container mx-auto px-4">
-                    <div class="text-center mb-16">
+                    <div class="text-center mb-16 reveal">
                         <h2 class="text-4xl font-bold text-foreground mb-4">Elles m'ont fait confiance</h2>
                     </div>
-                    <div class="max-w-4xl mx-auto">
+                    <div class="max-w-4xl mx-auto reveal">
                         <div id="testimonial-card" class="rounded-lg border bg-card text-card-foreground shadow-sm bg-gradient-to-br from-sage-light/50 to-cream border-none shadow-card">
                             <div class="p-8 md:p-12">
                                 <div class="text-center">
@@ -224,14 +229,14 @@
             <!-- Blog Section -->
             <section id="blog" class="py-20 bg-sage-light/30">
                 <div class="container mx-auto px-4">
-                    <div class="text-center mb-16">
+                    <div class="text-center mb-16 reveal">
                         <h2 class="text-4xl font-bold text-foreground mb-4">Mon Blog Santé : Conseils &amp; Inspirations</h2>
                         <p class="text-xl text-muted-foreground max-w-3xl mx-auto">Parce que la transmission est au cœur de ma pratique, je vous partage ici des articles pour vous aider à mieux comprendre votre corps et à cultiver votre bien-être au quotidien.</p>
                     </div>
                     <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        <div class="bg-card hover:shadow-card transition-all duration-300 transform hover:-translate-y-2 border-none overflow-hidden rounded-lg">
+                        <div class="bg-card hover:shadow-card transition-all duration-300 transform hover:-translate-y-2 border-none overflow-hidden rounded-lg reveal">
                             <div class="relative h-48 overflow-hidden">
-                                <img src="images/blog-plantes-sommeil.webp" alt="Les 5 plantes alliées d'un sommeil réparateur" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+                                <img src="https://i.imgur.com/3q4Y2Yd.jpeg" alt="Les 5 plantes alliées d'un sommeil réparateur" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy">
                                 <div class="absolute top-4 left-4">
                                     <span class="bg-nature-green text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">Phytothérapie</span>
                                 </div>
@@ -246,9 +251,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="bg-card hover:shadow-card transition-all duration-300 transform hover:-translate-y-2 border-none overflow-hidden rounded-lg">
+                        <div class="bg-card hover:shadow-card transition-all duration-300 transform hover:-translate-y-2 border-none overflow-hidden rounded-lg reveal">
                             <div class="relative h-48 overflow-hidden">
-                                <img src="images/blog-pleine-conscience.webp" alt="Manger en pleine conscience : comment ça marche ?" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+                                <img src="https://i.imgur.com/2g2Y2Yd.jpeg" alt="Manger en pleine conscience : comment ça marche ?" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy">
                                 <div class="absolute top-4 left-4">
                                     <span class="bg-nature-green text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">Nutrition</span>
                                 </div>
@@ -263,9 +268,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="bg-card hover:shadow-card transition-all duration-300 transform hover:-translate-y-2 border-none overflow-hidden rounded-lg">
+                        <div class="bg-card hover:shadow-card transition-all duration-300 transform hover:-translate-y-2 border-none overflow-hidden rounded-lg reveal">
                             <div class="relative h-48 overflow-hidden">
-                                <img src="images/blog-coherence-cardiaque.webp" alt="La cohérence cardiaque : votre outil anti-stress en 5 minutes" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+                                <img src="https://i.imgur.com/1Y2zQYc.jpeg" alt="La cohérence cardiaque : votre outil anti-stress en 5 minutes" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy">
                                 <div class="absolute top-4 left-4">
                                     <span class="bg-nature-green text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">Gestion du stress</span>
                                 </div>
@@ -281,7 +286,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="text-center mt-12">
+                    <div class="text-center mt-12 reveal">
                         <a href="#" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium h-11 border border-nature-green text-nature-green bg-transparent hover:bg-nature-green hover:text-white px-8 py-3 rounded-full transition-colors">
                             Voir tous les articles
                         </a>
@@ -292,12 +297,12 @@
             <!-- FAQ Section -->
             <section class="py-20 bg-warm-white">
                 <div class="container mx-auto px-4">
-                    <div class="text-center mb-16">
+                    <div class="text-center mb-16 reveal">
                         <h2 class="text-4xl font-bold text-foreground mb-4">Vos Questions, Mes Réponses</h2>
                     </div>
                     <div class="max-w-4xl mx-auto">
                         <div class="space-y-4" data-orientation="vertical">
-                            <div class="accordion-item bg-card rounded-lg px-6 border-none shadow-soft">
+                            <div class="accordion-item bg-card rounded-lg px-6 border-none shadow-soft reveal">
                                 <h3 class="flex">
                                     <button class="accordion-trigger flex flex-1 items-center justify-between transition-all hover:underline text-left text-lg font-semibold text-foreground hover:text-nature-green py-6">
                                         Comment se déroule une première consultation ?
@@ -308,7 +313,7 @@
                                     <div class="pt-0 text-muted-foreground text-base leading-relaxed pb-6">La première séance, ou 'Bilan Vitalité', dure 1h30. C'est un temps d'échange approfondi où nous passons en revue vos habitudes de vie, votre alimentation, votre état émotionnel... À l'issue de cette séance, je vous envoie par email un protocole d'hygiène vitale personnalisé avec des conseils concrets à mettre en place.</div>
                                 </div>
                             </div>
-                            <div class="accordion-item bg-card rounded-lg px-6 border-none shadow-soft">
+                            <div class="accordion-item bg-card rounded-lg px-6 border-none shadow-soft reveal">
                                 <h3 class="flex">
                                     <button class="accordion-trigger flex flex-1 items-center justify-between transition-all hover:underline text-left text-lg font-semibold text-foreground hover:text-nature-green py-6">
                                         La naturopathie est-elle remboursée ?
@@ -319,7 +324,7 @@
                                     <div class="pt-0 text-muted-foreground text-base leading-relaxed pb-6">La naturopathie n'est pas remboursée par la Sécurité Sociale. Cependant, de plus en plus de mutuelles proposent des forfaits pour les médecines douces. Je vous invite à vous renseigner auprès de votre complémentaire santé. Je vous fournirai une facture sur demande.</div>
                                 </div>
                             </div>
-                            <div class="accordion-item bg-card rounded-lg px-6 border-none shadow-soft">
+                            <div class="accordion-item bg-card rounded-lg px-6 border-none shadow-soft reveal">
                                 <h3 class="flex">
                                     <button class="accordion-trigger flex flex-1 items-center justify-between transition-all hover:underline text-left text-lg font-semibold text-foreground hover:text-nature-green py-6">
                                         Dois-je changer toute mon alimentation et acheter plein de compléments ?
@@ -338,12 +343,12 @@
             <!-- Appointment Section -->
             <section id="appointment" class="py-20 bg-sage-light/30">
                 <div class="container mx-auto px-4">
-                    <div class="text-center mb-16">
+                    <div class="text-center mb-16 reveal">
                         <h2 class="text-4xl font-bold text-foreground mb-4">Prête à commencer ?</h2>
                         <p class="text-xl text-muted-foreground max-w-3xl mx-auto">Planifions notre premier échange. Choisissez le créneau qui vous arrange directement ci-dessous pour votre Bilan Vitalité.</p>
                     </div>
                     <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
-                        <div class="space-y-8">
+                        <div class="space-y-8 reveal">
                             <div class="rounded-lg border text-card-foreground shadow-sm bg-card border-none shadow-card">
                                 <div class="flex flex-col space-y-1.5 p-6">
                                     <h3 class="tracking-tight flex items-center text-xl font-semibold text-foreground">
@@ -376,7 +381,7 @@
                                 <p class="text-nature-green font-medium">📞 06 12 34 56 78</p>
                             </div>
                         </div>
-                        <div class="bg-card rounded-lg shadow-card p-8">
+                        <div class="bg-card rounded-lg shadow-card p-8 reveal">
                             <div class="text-center space-y-4">
                                 <div class="h-64 bg-sage-light/30 rounded-lg flex items-center justify-center">
                                     <div class="text-center">
@@ -459,6 +464,9 @@
             </div>
         </footer>
     </div>
+
+    <!-- Scroll Reveal Library -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -594,6 +602,30 @@
                     }
                 });
             });
+
+            // Scroll Reveal Animations
+            const sr = ScrollReveal({
+                origin: 'bottom',
+                distance: '60px',
+                duration: 1000,
+                delay: 200,
+                easing: 'cubic-bezier(0.5, 0, 0, 1)',
+                // reset: true // Uncomment to repeat animations on scroll up
+            });
+
+            // Apply reveal to all elements with the 'reveal' class
+            sr.reveal('.reveal');
+
+            // Custom reveals for staggered effects
+            sr.reveal('#about .order-2', { origin: 'left' });
+            sr.reveal('#about .order-1', { origin: 'right', delay: 400 });
+
+            sr.reveal('#services .grid > div', { interval: 200 });
+            sr.reveal('#blog .grid > div', { interval: 200 });
+            sr.reveal('.accordion-item', { interval: 150 });
+            
+            sr.reveal('#appointment .grid > div:first-child', { origin: 'left' });
+            sr.reveal('#appointment .grid > div:last-child', { origin: 'right', delay: 400 });
         });
     </script>
 </body>
